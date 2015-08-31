@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainFrame">
+  <grid id="27dc6" binding="workTime" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="5" left="5" bottom="5" right="5"/>
+    <constraints>
+      <xy x="-1" y="-3" width="564" height="376"/>
+    </constraints>
+    <properties>
+      <doubleBuffered value="true"/>
+      <enabled value="true"/>
+      <minimumSize width="500" height="187"/>
+    </properties>
+    <border type="etched"/>
+    <children>
+      <component id="eb4d3" class="javax.swing.JLabel" binding="startedLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Time Started"/>
+        </properties>
+      </component>
+      <hspacer id="b6746">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="12352" class="javax.swing.JLabel" binding="lunchTaken">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="27009"/>
+          <text value="Lunch Time Taken"/>
+        </properties>
+      </component>
+      <component id="531ea" class="javax.swing.JLabel" binding="timeToWork">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="4" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Hours For Today"/>
+        </properties>
+      </component>
+      <vspacer id="65a86">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="7ddd2" class="javax.swing.JSpinner" binding="hoursDesired">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <vspacer id="a6961">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="38007" class="javax.swing.JButton" binding="calculateButton">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Calculate"/>
+        </properties>
+      </component>
+      <component id="dbd9" class="javax.swing.JLabel" binding="endTime">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="End time:                                     "/>
+        </properties>
+      </component>
+      <component id="38ded" class="javax.swing.JCheckBox" binding="lunchBoolean">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <splitpane id="3157a" binding="lunchSplitter">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <dividerLocation value="40"/>
+          <dividerSize value="0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="10c7a" class="javax.swing.JSpinner" binding="startHour">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <splitpane id="e18fe">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties>
+              <dividerLocation value="78"/>
+              <dividerSize value="0"/>
+              <lastDividerLocation value="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="d6a40" class="javax.swing.JSpinner" binding="StartMin">
+                <constraints>
+                  <splitpane position="left"/>
+                </constraints>
+                <properties>
+                  <preferredSize width="-1" height="-1"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <splitpane id="ee4d5" binding="ampm">
+                <constraints>
+                  <splitpane position="right"/>
+                </constraints>
+                <properties>
+                  <dividerSize value="0"/>
+                  <orientation value="0"/>
+                  <resizeWeight value="0.0"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f0c6a" class="javax.swing.JRadioButton" binding="amOption">
+                    <constraints>
+                      <splitpane position="left"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <text value="am"/>
+                      <verifyInputWhenFocusTarget value="false"/>
+                    </properties>
+                  </component>
+                  <component id="c8cba" class="javax.swing.JRadioButton" binding="pmOption">
+                    <constraints>
+                      <splitpane position="right"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <text value="pm"/>
+                      <visible value="true"/>
+                    </properties>
+                  </component>
+                </children>
+              </splitpane>
+            </children>
+          </splitpane>
+        </children>
+      </splitpane>
+      <splitpane id="663ef">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <continuousLayout value="false"/>
+          <dividerLocation value="30"/>
+          <dividerSize value="0"/>
+          <orientation value="0"/>
+          <resizeWeight value="0.0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="27009" class="javax.swing.JSlider" binding="lunchChooser">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <enabled value="false"/>
+              <majorTickSpacing value="5"/>
+              <maximum value="60"/>
+              <paintLabels value="false"/>
+              <paintTicks value="false"/>
+              <snapToTicks value="true"/>
+              <value value="30"/>
+              <valueIsAdjusting value="false"/>
+            </properties>
+            <clientProperties>
+              <JSlider.isFilled class="java.lang.Boolean" value="true"/>
+              <Slider.paintThumbArrowShape class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+          </component>
+          <component id="237b9" class="javax.swing.JLabel" binding="sliderTime">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+              <text value="30"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+        </children>
+      </splitpane>
+    </children>
+  </grid>
+</form>
