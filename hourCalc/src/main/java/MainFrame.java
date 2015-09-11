@@ -73,7 +73,7 @@ public class MainFrame extends JFrame {
         SpinnerNumberModel hourModel = new SpinnerNumberModel(7, 1, 12, 1);
         startHour.setModel(hourModel);
         JSpinner.DefaultEditor hourEditor = (JSpinner.DefaultEditor) startHour.getEditor();
-        JTextField hours = hourEditor.getTextField();
+        final JTextField hours = hourEditor.getTextField();
         hours.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -97,7 +97,7 @@ public class MainFrame extends JFrame {
         SpinnerNumberModel minuteModel = new SpinnerNumberModel(0, 0, 59, 1);
         StartMin.setModel(minuteModel);
         JSpinner.DefaultEditor minEditor = (JSpinner.DefaultEditor) StartMin.getEditor();
-        JTextField minutes = minEditor.getTextField();
+        final JTextField minutes = minEditor.getTextField();
         minutes.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -120,7 +120,7 @@ public class MainFrame extends JFrame {
         SpinnerNumberModel desiredModel = new SpinnerNumberModel(8, 0, 12, 0.5);
         hoursDesired.setModel(desiredModel);
         JSpinner.DefaultEditor desiredEditor = (JSpinner.DefaultEditor) hoursDesired.getEditor();
-        JTextField desired = desiredEditor.getTextField();
+        final JTextField desired = desiredEditor.getTextField();
         desired.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -182,9 +182,6 @@ public class MainFrame extends JFrame {
             sHours += 12;
         }
         Double sMinutes = Double.parseDouble(startMins);
-        if(sMinutes >= 30.0){
-            CarryMin = 1.0;
-        }
         if(sHours + dHours >= 24.0) {
             eAM = true;
         }
